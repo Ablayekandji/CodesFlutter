@@ -12,8 +12,7 @@ class PremierRoute extends StatelessWidget {
         child: RaisedButton(
           child: Text('Ouvrir la page'),
           onPressed: (() {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => SecondRoute()));
+            Navigator.pushNamed(context, '/second');
           }),
         ),
       ),

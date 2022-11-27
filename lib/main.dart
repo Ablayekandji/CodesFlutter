@@ -1,3 +1,5 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Exemple6.dart';
 import 'package:flutter_application_1/Exemple7.dart';
@@ -5,7 +7,11 @@ import 'package:flutter_application_1/Exemple7.dart';
 void main() {
   runApp(MaterialApp(
     title: 'Les routes de navigation',
-    home: PremierRoute(),
+    initialRoute: '/',
+    routes: {
+      '/': (context) => PremierRoute(),
+      '/second': (context) => SecondRoute()
+    },
   ));
 }
 
