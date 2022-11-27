@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Exemple6.dart';
 
 void main() {
-  runApp(PageAccueil());
+  runApp(Exemple6());
 }
 
 class PageAccueil extends StatefulWidget {
