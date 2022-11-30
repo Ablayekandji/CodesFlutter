@@ -13,6 +13,20 @@ class _HomeMenudrawer extends State<Menudrawer> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: Image.asset(
+                'assets/images/profile.jpg',
+                fit: BoxFit.contain,
+              ),
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
+              tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+            );
+          },
+        ),
         backgroundColor: Colors.green,
         title: Text("menu"),
       ),
