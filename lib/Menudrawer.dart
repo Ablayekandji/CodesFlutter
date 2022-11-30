@@ -16,14 +16,22 @@ class _HomeMenudrawer extends State<Menudrawer> {
         leading: Builder(
           builder: (BuildContext context) {
             return IconButton(
-              icon: Image.asset(
-                'assets/images/profile.jpg',
-                fit: BoxFit.contain,
+              icon: CircleAvatar(
+                backgroundColor: Colors.white,
+                radius: 50,
+                child: ClipOval(
+                  child: Image.asset(
+                    'assets/images/profile.jpg',
+                    fit: BoxFit.cover,
+                    width: 50, // x2 (twice) the radius of CircleAvatar
+                    height: 50, // x2 (twice) the radius of CircleAvatar
+                  ),
+                ),
               ),
               onPressed: () {
                 Scaffold.of(context).openDrawer();
               },
-              tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+              // tooltip: MaterialLocalizations.of(context).closeButtonTooltip,
             );
           },
         ),
